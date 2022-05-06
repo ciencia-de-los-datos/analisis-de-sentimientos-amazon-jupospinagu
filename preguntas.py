@@ -110,13 +110,13 @@ def pregunta_04():
     # inferior de 5 palabras. Solo deben analizarse palabras conformadas por
     # letras.
     countVectorizer = (
-        analyzer = 'word',
-        lowercase= True,
-        stop_words= "english",
-        token_pattern= r"(?u)\b[a-zA-Z][a-zA-Z]+\b",
-        binary= True,
-        max_df= 1,
-        min_df= 5)
+        analyzer = ',
+        lowercase= ,
+        stop_words= ,
+        token_pattern= ,
+        binary= ,
+        max_df= ,
+        min_df= )
 
     # Cree un pipeline que contenga el CountVectorizer y el modelo de BernoulliNB.
     pipeline = Pipeline(
