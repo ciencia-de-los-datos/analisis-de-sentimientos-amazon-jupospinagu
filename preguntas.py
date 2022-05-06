@@ -111,7 +111,7 @@ def pregunta_04():
     # letras.
     
     countVectorizer = CountVectorizer(
-        analyzer= "word",
+        analyzer= analyzer,
         lowercase= True,
         stop_words= "english",
         token_pattern= r"(?u)\b[a-zA-Z][a-zA-Z]+\b",
@@ -138,7 +138,7 @@ def pregunta_04():
     # Defina una instancia de GridSearchCV con el pipeline y el diccionario de
     # parámetros. Use cv = 5, y "accuracy" como métrica de evaluación
     gridSearchCV = GridSearchCV(
-        estimator= BernoulliNB(),
+        estimator= pipeline,
         param_grid= param_grid,
         cv= 5,
         scoring= "accuracy",
