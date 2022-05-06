@@ -109,14 +109,7 @@ def pregunta_04():
     # límite superior para la frecuencia de palabras es del 100% y un límite
     # inferior de 5 palabras. Solo deben analizarse palabras conformadas por
     # letras.
-    countVectorizer = (
-    analyzer = ,
-    lowercase= ,
-    stop_words= ,
-    token_pattern= ,
-    binary= ,
-    max_df= ,
-    min_df= )
+    
 
     # Cree un pipeline que contenga el CountVectorizer y el modelo de BernoulliNB.
     pipeline = Pipeline(
