@@ -111,7 +111,7 @@ def pregunta_04():
     # letras.
     
     countVectorizer = CountVectorizer(
-        analyzer= analyzer,
+        analyzer= "word",
         lowercase= True,
         stop_words= "english",
         token_pattern= r"(?u)\b[a-zA-Z][a-zA-Z]+\b",
