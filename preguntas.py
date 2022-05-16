@@ -116,7 +116,7 @@ def pregunta_04():
         stop_words= "english",
         token_pattern= r"(?u)\b[a-zA-Z][a-zA-Z]+\b",
         binary= False,
-        max_df= 1,
+        max_df= 1.0,
         min_df= 5,
     )
 
