@@ -111,11 +111,11 @@ def pregunta_04():
     # letras.
     
     countVectorizer = CountVectorizer(
-        analyzer= "word",
+        analyzer= analyzer,
         lowercase= True,
         stop_words= "english",
         token_pattern= r"(?u)\b[a-zA-Z][a-zA-Z]+\b",
-        binary= True,
+        binary= False,
         max_df= 1,
         min_df= 5,
     )
@@ -132,18 +132,18 @@ def pregunta_04():
     # considerar 10 valores entre 0.1 y 1.0 para el parámetro alpha de
     # BernoulliNB.
     param_grid = {
-        "alpha": np.linspace(start=0.1, stop=1, num=10),
+        "BN__alpha": np.linspace(0.1, 1.0, 10),
     }
 
     # Defina una instancia de GridSearchCV con el pipeline y el diccionario de
     # parámetros. Use cv = 5, y "accuracy" como métrica de evaluación
     gridSearchCV = GridSearchCV(
-        estimator= BernoulliNB(),
+        estimator= pipeline,
         param_grid= param_grid,
         cv= 5,
         scoring= "accuracy",
         refit= True,
-        return_train_score= False,
+        return_train_score= True,
     )
 
     # Búsque la mejor combinación de regresores
